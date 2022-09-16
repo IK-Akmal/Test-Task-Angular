@@ -1,0 +1,15 @@
+<section class="container ">
+    <nav class="nav">
+        <a class="nav-link" [routerLink]="'/'">Home</a>
+    </nav>
+
+    <div class="row py-8">
+        <ul class="nav nav-tabs col-12">
+            <li *ngFor="let type of transcationsType; let i = index" class="nav-item">
+                <a class="nav-link " [ngClass]="{'active':currentTab === i}" [routerLink]="'/list'"
+                    [queryParams]="{tab:i}">{{type | titlecase}}</a>
+            </li>
+        </ul>
+        <app-table class="col-12" [transactions]="transactions"></app-table>
+    </div>
+</section>
