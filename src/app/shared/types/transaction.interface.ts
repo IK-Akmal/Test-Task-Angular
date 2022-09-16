@@ -1,7 +1,9 @@
-interface CardInterface {
+import { TransactionType } from "./transaction.type";
+
+interface TransactionInterface {
     _id: string;
-    type: "income" | "outcome" | "loan" | "investment";
     amount: number;
+    type: TransactionType
     name: {
         first: string;
         last: string;
@@ -11,3 +13,5 @@ interface CardInterface {
     phone: string;
     address: string;
 }
+
+export default TransactionInterface;
