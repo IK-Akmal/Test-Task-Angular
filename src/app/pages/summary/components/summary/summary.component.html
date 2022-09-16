@@ -1,0 +1,24 @@
+<section class="container">
+    <div class="row my-2">
+        <div class="col-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    Welcome
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Welcomme</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary ">See transactions</a>
+                </div>
+                <div class="card-footer text-muted">
+                    You have {{data.total}} transactions
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <app-card class="col-md-6 my-2" *ngFor="let transactionType of transactionTypes; let i = index "
+            [type]="transactionType" [tabIndex]="i">
+        </app-card>
+    </div>
+</section>
