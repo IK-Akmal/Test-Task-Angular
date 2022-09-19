@@ -6,7 +6,7 @@
     <div class="row py-8">
         <ul class="nav nav-tabs col-12">
             <li *ngFor="let type of transcationsType; let i = index" class="nav-item">
-                <a class="nav-link " [ngClass]="{'active':currentTab === i}" [routerLink]="'/list'"
+                <a class="nav-link " [ngClass]="{'active':currentTab === i}" [routerLink]="'/navigator'"
                     [queryParams]="{tab:i}">{{type | titlecase}}</a>
             </li>
         </ul>

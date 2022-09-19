@@ -9,5 +9,4 @@ import TransactionInterface from "src/app/shared/types/transaction.interface";
 
 export class TableComponent {
     @Input('transactions') transactionsProps!: TransactionInterface[];
-
 }

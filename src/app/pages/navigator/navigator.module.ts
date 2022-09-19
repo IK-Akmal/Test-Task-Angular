@@ -7,7 +7,7 @@ import { TableComponent } from "./components/table/table.component";
 
 const routes: Routes = [
     {
-        path: 'list',
+        path: 'navigator',
         component: NavigatorComponent
     },
 ]
