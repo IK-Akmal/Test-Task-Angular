@@ -26,14 +26,14 @@ export class NavigatorComponent implements OnInit, OnDestroy {
 
 
     ngOnInit(): void {
-        this.initializeListerners()
+        this.initializeListeners()
     }
 
     ngOnDestroy(): void {
         this.queryParamsSubscription.unsubscribe()
     }
 
-    initializeListerners() {
+    initializeListeners() {
         this.queryParamsSubscription = this.route.queryParams
             .subscribe((params: Params) => {
                 this.currentTab = Number(params['tab'] ?? '0') ?? 0;
